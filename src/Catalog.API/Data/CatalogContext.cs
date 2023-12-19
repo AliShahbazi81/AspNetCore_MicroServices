@@ -12,7 +12,7 @@ public class CatalogContext : ICatalogContext
         // Find and get the database, if null -> create
         var database = client.GetDatabase(configuration.GetValue<string>("DatabaseSettings:DatabaseName"));
 
-        Products = database.GetCollection<Product>(configuration.GetValue<string>("Database:CollectionName"));
+        Products = database.GetCollection<Product>(configuration.GetValue<string>("DatabaseSettings:CollectionName"));
         CatalogContextSeed.SeedData(Products);
     }
     public IMongoCollection<Product> Products { get; }
