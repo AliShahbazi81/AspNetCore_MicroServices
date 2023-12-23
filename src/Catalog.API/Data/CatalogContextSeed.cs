@@ -18,6 +18,7 @@ public class CatalogContextSeed
 
     private static IEnumerable<Product> GetPreconfiguredProducts()
     {
+        // Return a new created list
         return new List<Product>
         {
             new()
