@@ -7,7 +7,7 @@ public class CatalogContext : ICatalogContext
 {
     public CatalogContext(IConfiguration configuration)
     {
-        // Initiate the connection to the database
+        // Initiate the connection to the database 1
         var client = new MongoClient(configuration.GetValue<string>("DatabaseSettings:ConnectionString"));
         // Find and get the database, if null -> create
         var database = client.GetDatabase(configuration.GetValue<string>("DatabaseSettings:DatabaseName"));
